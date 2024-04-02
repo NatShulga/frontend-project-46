@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/NatShulga/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-46/actions)",
+  "bin": {
+    "nodejs-package": "bin/nodejs-package.js"
+  },
+  "simple-git-hooks": {
+    "pre-push": "make lint"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
