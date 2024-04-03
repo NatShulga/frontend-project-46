@@ -4,7 +4,7 @@
   "type": "module",
   "description": "[![Actions Status](https://github.com/NatShulga/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-46/actions)",
   "bin": {
-    "nodejs-package": "bin/nodejs-package.js"
+    "gendiff": "./bin/gendiff.js"
   },
   "simple-git-hooks": {
     "pre-push": "make lint"

@@ -5,4 +5,13 @@ install:
 	npm ci
 
 publish:
-	mpm publish --dry-run
+	npm publish --dry-run
+
+lint:
+	npx eslint .
+
+test: 
+	npm test
+
+test-coverage:
+	
