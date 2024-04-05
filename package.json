@@ -9,13 +9,13 @@
   "simple-git-hooks": {
     "pre-push": "make lint"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/NatShulga/frontend-project-46.git"
+    "url": "git+https://github.com/NatShulga/frontend-project-46.git"
   },
   "author": "",
   "license": "ISC",
