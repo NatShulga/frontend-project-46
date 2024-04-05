@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-import { Command } from 'commander';
+import { Command } from 'commander/esm.mjs';
 
 const program = new Command();
 program
-  .version('12.0.0', '-V, --version', 'output the version number')
-  .description('Команда соединяет две строки в одну')
+  .version('12.0.0')
+  .description('The command joins two lines into one')
+  .option('-f, --format [type]', 'output format', 'stylish')
   .arguments('<filepath1> <filepath2>')
-  .option('-V, --version', 'output the version number')
-  .option('-h, --help', 'output usage information');
-program.parse(process.argv);
+  .action((filepath1, filepath2, { format }) => {
+    console.log(genDiff(filepath1, filepath2, format));
+  });
+program.parse();
 
