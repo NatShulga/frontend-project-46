@@ -8,8 +8,8 @@ program
   .description('The command joins two lines into one')
   .option('-f, --format [type]', 'output format', 'stylish')
   .arguments('<filepath1> <filepath2>')
-  .action((filepath1, filepath2, { format }) => {
-    console.log(genDiff(filepath1, filepath2, format));
+  .action((filepath1, filepath2) => {
+    console.log(genDiff(filepath1, filepath2, program.opts().format));
   });
 program.parse();
 
