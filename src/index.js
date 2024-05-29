@@ -1,4 +1,6 @@
 /* eslint no-underscore-dangle: 0 */
+import path from 'path';
+
 const dataFromFile = (file) => {
   const extname = path.extname(file).slice(1);
   const read = readFile(file);
