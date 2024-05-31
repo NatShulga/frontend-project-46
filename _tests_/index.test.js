@@ -1,5 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
 import genDiff from '../src/index.js';
+import readFile from '../src/utils.js';
 
 describe('check output', () => {
   const testFormats = [
