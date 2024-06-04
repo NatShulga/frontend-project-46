@@ -2,6 +2,8 @@
 import path from 'path';
 import parse from './parsers.js';
 import readFile from './utils.js';
+import getDiffTree from './formatters/getDiffTree.js';
+import getFormat from './formatters/index.js';
 
 const dataFromFile = (file) => {
   const extname = path.extname(file).slice(1);
