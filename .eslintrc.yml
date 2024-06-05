@@ -11,3 +11,5 @@ rules:
     - error
     - ignorePackages
     - js: always
+exports.rules:
+  'import/no-extraneous-dependencies': [2, { devDependencies: /test|spec/ }]
