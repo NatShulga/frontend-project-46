@@ -1,11 +1,12 @@
 import getFormatStylish from './formStylish.js';
+import formPlain from './formPlain.js';
 
 const getFormat = (abstractSyntaxTree, format) => {
   switch (format) {
     case 'json':
       return getFormatJson(abstractSyntaxTree);
     case 'plain':
-      return formatPlain(abstractSyntaxTree);
+      return formPlain(abstractSyntaxTree);
     case 'stylish':
       return getFormatStylish(abstractSyntaxTree);
     default:
