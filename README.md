@@ -14,10 +14,14 @@ Installation:
 
 To install, run the following commands:
 
-~ git clone 
+~ git clone git@github.com:NatShulga/frontend-project-46.git
+
 ~ cd frontend-project-lvl2
+
 ~ make install
+
 ~ sudo npm link
+
 
 Get help information:
 
