@@ -8,3 +8,6 @@
 Project "Difference Finder"
 
 ~ The utility compares the configurations of two json and yaml files. Points out their differences.
+
+
+[![asciicast](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG.svg)](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG)
