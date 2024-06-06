@@ -1,4 +1,4 @@
-import getFormatStylish from './formatStylish.js';
+import getFormatStylish from './formStylish.js';
 
 const getFormat = (abstractSyntaxTree, format) => {
   switch (format) {
