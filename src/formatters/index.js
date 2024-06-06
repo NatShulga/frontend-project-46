@@ -1,3 +1,5 @@
+import getFormatStylish from './formatStylish.js';
+
 const getFormat = (abstractSyntaxTree, format) => {
   switch (format) {
     case 'json':
