@@ -25,4 +25,9 @@ To install, run the following commands:
 
 Get help information:
 
-[![asciicast](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG.svg)](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG)
+[![asciicast](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG.svg)](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG) 
+
+Data from stylish format: 
+
+[![asciicast](https://asciinema.org/a/SRk1iCrsxr2KgNiBbG8sVozdB.svg)](https://asciinema.org/a/SRk1iCrsxr2KgNiBbG8sVozdB) 
+
