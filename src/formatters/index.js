@@ -1,5 +1,6 @@
 import getFormatStylish from './formStylish.js';
 import formPlain from './formPlain.js';
+import getFormatJson from './formJson.js';
 
 const getFormat = (abstractSyntaxTree, format) => {
   switch (format) {

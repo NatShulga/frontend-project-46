@@ -31,3 +31,10 @@ Data from stylish format:
 
 [![asciicast](https://asciinema.org/a/SRk1iCrsxr2KgNiBbG8sVozdB.svg)](https://asciinema.org/a/SRk1iCrsxr2KgNiBbG8sVozdB) 
 
+Plain format:
+
+[![asciicast](https://asciinema.org/a/Jx8QcLzuyahBwEvYpJUdBPv99.svg)](https://asciinema.org/a/Jx8QcLzuyahBwEvYpJUdBPv99)
+
+Json format:
+
+[![asciicast](https://asciinema.org/a/4xLBAjTWzW9PVur7wd0JPkAAk.svg)](https://asciinema.org/a/4xLBAjTWzW9PVur7wd0JPkAAk)
