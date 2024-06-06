@@ -10,4 +10,15 @@ Project "Difference Finder"
 ~ The utility compares the configurations of two json and yaml files. Points out their differences.
 
 
+Installation:
+
+To install, run the following commands:
+
+~ git clone git@github.com:Arguzspb/frontend-project-lvl2.git
+~ cd frontend-project-lvl2
+~ make install
+~ sudo npm link
+
+Get help information:
+
 [![asciicast](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG.svg)](https://asciinema.org/a/UVLqfAFS6jImrmlQPD1R1xmvG)
