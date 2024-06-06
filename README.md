@@ -14,7 +14,7 @@ Installation:
 
 To install, run the following commands:
 
-~ git clone git@github.com:Arguzspb/frontend-project-lvl2.git
+~ git clone 
 ~ cd frontend-project-lvl2
 ~ make install
 ~ sudo npm link
