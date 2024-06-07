@@ -1,6 +1,7 @@
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
+import readFile from '../src/utils.js';
 import gendiff from "../src/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
