@@ -6,8 +6,8 @@ describe('check output', () => {
   const testFormats = [
     ['file1.json', 'file2.json', 'stylishFormatTest.txt'],
     ['file1.yaml', 'file2.yaml', 'stylishFormatTest.txt', 'stylish'],
-    ['file1.json', 'file2.yaml', 'plainFormatTest.txt', 'plain'],
-    ['file1.yaml', 'file2.json', 'jsonFormatTest.txt', 'json'],
+    ['file1.json', 'file2.yaml', 'plainData.txt', 'plain'],
+    ['file1.yaml', 'file2.json', 'jsonData.txt', 'json'],
   ];
   test.each(testFormats)(
     'formatters work',
