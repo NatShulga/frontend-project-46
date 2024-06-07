@@ -1,20 +1,79 @@
-import { describe, expect, test } from '@jest/globals';
-import readFile from '../src/utils.js';
-import genDiff from '../src/index.js';
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
+import gendiff from "../src/index.js";
 
-describe('check output', () => {
-  const testFormats = [
-    ['file1.json', 'file2.json', 'stylishFormatTest.txt'],
-    ['file1.yaml', 'file2.yaml', 'stylishFormatTest.txt', 'stylish'],
-    ['file1.json', 'file2.yaml', 'plainData.txt', 'plain'],
-    ['file1.yaml', 'file2.json', 'jsonData.txt', 'json'],
-  ];
-  test.each(testFormats)(
-    'formatters work',
-    (file1, file2, expectedFile, format = 'stylish') => {
-      const result = genDiff(file1, file2, format);
-      const expected = readFile(expectedFile);
-      expect(result).toEqual(expected);
-    },
-  );
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const getFixturePath = (filename) =>
+  path.resolve(__dirname, "..", "__fixtures__", filename);
+
+const readFile = (filename) => {
+  const filePath = getFixturePath(filename);
+  if (fs.existsSync(filePath)) {
+    return fs.readFileSync(filePath, "utf-8");
+  } else {
+    throw new Error(`File "${filename}" not found.`);
+  }
+};
+
+const stylish = readFile("stylishFormatTest.txt");
+const plain = readFile("plainData.txt");
+const json = readFile("jsonData.txt");
+
+describe("testing all formates", () => {
+  it("default format", () => {
+    expect(
+      gendiff(
+        getFixturePath("file1.json"),
+        getFixturePath("file2.yml"),
+        "stylish"
+      )
+    ).toStrictEqual(stylish);
+  });
+  it("stylish format, json files", () => {
+    expect(
+      gendiff(
+        getFixturePath("file1.json"),
+        getFixturePath("file2.json")
+      ).toStrictEqual(stylish)
+    );
+  });
+  it("stylish format, yaml files, json files", () => {
+    expect(
+      gendiff(
+        getFixturePath("file1.yml"),
+        getFixturePath("file2.yml")
+      ).toStrictEqual(stylish)
+    );
+  });
+  it("plain format, json files", () => {
+    expect(
+      gendiff(
+        getFixturePath("file1.json"),
+        getFixturePath("file2.json"),
+        "plain"
+      )
+    ).toStrictEqual(plain);
+  });
+  it("plain format, yaml files", () => {
+    expect(
+      gendiff(getFixturePath("file1.yml"), getFixturePath("file2.yml"), "plain")
+    ).toStrictEqual(plain);
+  });
+  it("json format, json files", () => {
+    expect(
+      gendiff(
+        getFixturePath("file1.json"),
+        getFixturePath("file2.json"),
+        "json"
+      )
+    ).toStrictEqual(json);
+  });
+  it("json format, yaml files", () => {
+    expect(
+      gendiff(getFixturePath("file1.yml"), getFixturePath("file2.yml"), "json")
+    ).toStrictEqual(json);
+  });
 });
