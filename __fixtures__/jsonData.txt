@@ -1,8 +1,8 @@
 [
  {
-  "type": "nested", 
-  "key": "common",  
-  "children": [     
+  "type": "nested",
+  "key": "common",
+  "children": [
    {
     "type": "added",
     "key": "follow",
