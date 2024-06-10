@@ -3,7 +3,7 @@ import yaml from 'js-yaml';
 const parsers = {
   json: JSON.parse,
   yml: yaml.safeLoad,
-  yaml: yaml.safeLoad
+  yaml: yaml.safeLoad,
 };
 
 const parse = (content, extname) => {
