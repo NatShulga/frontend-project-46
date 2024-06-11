@@ -20,7 +20,13 @@ jobs:
       - run: make install
       - run: make lint
       - run: make test
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+      - name: Test & publish code coverage
+        # Publish code coverage on Code Climate
+        # https://github.com/paambaati/codeclimate-action
+        uses: paambaati/codeclimate-action@v3.0.0
+        # Add Code Climate secret key
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-         token: ${{ secrets.CODECOV_TOKEN }}
+          coverageCommand: make test-coverage
+          debug: true
