@@ -15,6 +15,6 @@ test:
 
 report:
 	./gradlew jacocoTestReport
-	
+
 test-coverage:
-	
+	npx jest --coverage
