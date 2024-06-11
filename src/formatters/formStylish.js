@@ -18,8 +18,7 @@ const stringify = (data, depth = 1) => {
 const getFormatStylish = (diffTree) => {
   const iter = (tree, depth = 1) =>
     tree.map((node) => {
-      const createStrWithSing = (value, sign) =>
-        `${indent(depth)}${sign} ${node.key}: ${stringify(value, depth)}\n`;
+      const createStrWithSing = (value, sign) => `${indent(depth)}${sign} ${node.key}: ${stringify(value, depth)}\n`;
       switch (node.type) {
         case 'added':
           return createStrWithSing(node.value, '+');

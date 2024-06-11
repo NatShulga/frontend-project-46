@@ -30,8 +30,10 @@ describe('testing all formates', () => {
     expect(result).toEqual(stylish);
   });
   it('stylish format, yaml files, json files', () => {
-    const result = gendiff(getFixturePath('file1.yaml'),
-      getFixturePath('file2.yaml'))
+    const result = gendiff(
+      getFixturePath('file1.yaml'),
+      getFixturePath('file2.yaml')
+    );
     expect(result).toEqual(stylish);
   });
   it('plain format, json files', () => {
@@ -39,8 +41,8 @@ describe('testing all formates', () => {
       gendiff(
         getFixturePath('file1.json'),
         getFixturePath('file2.json'),
-        'plain'
-      )
+        'plain',
+      ),
     ).toEqual(plain);
   });
   it('plain format, yaml files', () => {
@@ -48,19 +50,19 @@ describe('testing all formates', () => {
       gendiff(
         getFixturePath('file1.yaml'),
         getFixturePath('file2.yaml'),
-        'plain'
+        'plain',
       ),
     ).toEqual(plain);
   });
-  
+
   it('json format, json files, yaml files', () => {
     const result = gendiff(
       getFixturePath('file1.json'),
       getFixturePath('file2.json'),
-      'json'
+      'json',
     );
-  expect(result.trim()).toEqual(json.trim());
-    });
+    expect(result.trim()).toEqual(json.trim());
+  });
 
   it('json format, yaml files', () => {
     const result = gendiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'));

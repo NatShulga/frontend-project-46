@@ -33,4 +33,3 @@ const getFormPlain = (diffTree) => {
   return iter(diffTree);
 };
 export default getFormPlain;
-
