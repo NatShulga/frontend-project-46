@@ -32,7 +32,7 @@ describe('testing all formates', () => {
   it('stylish format, yaml files, json files', () => {
     const result = gendiff(
       getFixturePath('file1.yaml'),
-      getFixturePath('file2.yaml')
+      getFixturePath('file2.yaml'),
     );
     expect(result).toEqual(stylish);
   });
