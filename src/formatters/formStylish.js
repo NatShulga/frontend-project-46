@@ -16,23 +16,23 @@ const stringify = (data, depth = 1) => {
 };
 
 const getFormatStylish = (diffTree) => {
-  const iter = (tree, depth = 1) => tree.map((node) => { 
+  const iter = (tree, depth = 1) => tree.map((node) => {
     const createStrWithSing = (value, sign) => `${indent(depth)}${sign} ${node.key}: ${stringify(value, depth)}\n`;
-      switch (node.type) {
-        case 'added':
-          return createStrWithSing(node.value, '+');
-        case 'removed':
-          return createStrWithSing(node.value, '-');
-        case 'unchanged':
-          return createStrWithSing(node.value, ' ');
-        case 'changed':
-          return `${createStrWithSing(node.value1, '-')}${createStrWithSing(node.value2, '+')}`;
-        case 'nested':
-          return `${indent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1).join('')}${indent(depth)}  }\n`;
-        default:
-          throw new Error(`This type doesn't exist: ${node.type}`);
-      }
-    });
+    switch (node.type) {
+      case 'added':
+        return createStrWithSing(node.value, '+');
+      case 'removed':
+        return createStrWithSing(node.value, '-');
+      case 'unchanged':
+        return createStrWithSing(node.value, ' ');
+      case 'changed':
+        return `${createStrWithSing(node.value1, '-')}${createStrWithSing(node.value2, '+')}`;
+      case 'nested':
+        return `${indent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1).join('')}${indent(depth)}  }\n`;
+      default:
+        throw new Error(`This type doesn't exist: ${node.type}`);
+    }
+  });
   return `{\n${iter(diffTree).join('')}}`;
 };
 
