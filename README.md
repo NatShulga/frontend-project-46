@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/NatShulga/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-46/actions)   [![Test Coverage](https://img.shields.io/codecov/c/github/user/repo.svg)](https://codecov.io/gh/user/repo)   [![Maintainability](https://api.codeclimate.com/v1/badges/d5166dd045831b3b5f5d/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-46/maintainability)
+[![Actions Status](https://github.com/NatShulga/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NatShulga/frontend-project-46/actions)   [![Test Coverage](https://api.codeclimate.com/v1/badges/d5166dd045831b3b5f5d/test_coverage)](https://codeclimate.com/github/NatShulga/frontend-project-46/test_coverage)   [![Maintainability](https://api.codeclimate.com/v1/badges/d5166dd045831b3b5f5d/maintainability)](https://codeclimate.com/github/NatShulga/frontend-project-46/maintainability)
 
 
 Project "Difference Finder"
