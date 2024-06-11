@@ -16,7 +16,7 @@ To install, run the following commands:
 
 ~ git clone git@github.com:NatShulga/frontend-project-46.git
 
-~ cd frontend-project-lvl2
+~ cd frontend-project-46
 
 ~ make install
 
