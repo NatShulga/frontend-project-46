@@ -20,13 +20,7 @@ jobs:
       - run: make install
       - run: make lint
       - run: make test
-      - name: Publish code coverage
-        uses: paambaati/codeclimate-action@v5.0.0
-        env:
-        
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-          JACOCO_SOURCE_PATH: app/src/main/java
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
         with:
-         coverageCommand: make test-coverage
-         coverageLocations: ${{github.workspace}}/build/reports/jacoco/test/jacocoTestReport.xml:jacoco 
-         debug: true
+         token: ${{ secrets.CODECOV_TOKEN }}
