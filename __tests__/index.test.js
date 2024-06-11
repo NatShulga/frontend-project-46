@@ -18,21 +18,21 @@ describe('testing all formates', () => {
       gendiff(
         getFixturePath('file1.json'),
         getFixturePath('file2.yaml'),
-        'stylish'
+        'stylish',
       ),
-    ).toEqual(stylish)
+    ).toEqual(stylish);
   });
   it('stylish format, json files', () => {
-      const result = gendiff(
+    const result = gendiff(
       getFixturePath('file1.json'),
-      getFixturePath('file2.json')
-      );
-      expect(result).toEqual(stylish)
+      getFixturePath('file2.json'),
+    );
+    expect(result).toEqual(stylish);
   });
   it('stylish format, yaml files, json files', () => {
-      const result = gendiff(getFixturePath('file1.yaml'),
+    const result = gendiff(getFixturePath('file1.yaml'),
       getFixturePath('file2.yaml'))
-      expect(result).toEqual(stylish)
+    expect(result).toEqual(stylish);
   });
   it('plain format, json files', () => {
     expect(
