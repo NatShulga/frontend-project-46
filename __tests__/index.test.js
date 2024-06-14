@@ -7,13 +7,9 @@ import gendiff from "../src/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getFixturePath = (filename) =>
-  path.resolve(__dirname, "..", "__fixtures__", filename);
+const getFixturePath = (filename) => path.resolve(__dirname, "..", "__fixtures__", filename);
 
-const stylish = fs.readFileSync(
-  getFixturePath("stylishFormatTest.txt"),
-  "utf-8"
-);
+const stylish = fs.readFileSync(getFixturePath("stylishFormatTest.txt"),"utf-8");
 const plain = fs.readFileSync(getFixturePath("plainData.txt"), "utf-8");
 const json = fs.readFileSync(getFixturePath("jsonData.txt"), "utf-8");
 
