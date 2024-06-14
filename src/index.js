@@ -2,7 +2,7 @@
 import path from 'path';
 import parse from './parsers.js';
 import readFile from './utils.js';
-import buildDiffTree from './getDiffTree.js';
+import buildDiffTree from './buildDiffTree.js';
 import getFormat from './formatters/index.js';
 
 const dataFromFile = (file) => {
