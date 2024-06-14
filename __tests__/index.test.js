@@ -13,9 +13,9 @@ const stylish = fs.readFileSync(getFixturePath('stylishFormatTest.txt'), 'utf-8'
 const plain = fs.readFileSync(getFixturePath('plainData.txt'), 'utf-8');
 const json = fs.readFileSync(getFixturePath('jsonData.txt'), 'utf-8');
 
-beforeAll(() => {
-  return stylish, plain,json;
-});
+beforeAll(() => 
+  {return stylish, plain,json}
+);
 
 describe('check output', () => {
   const testData = [
