@@ -1,6 +1,12 @@
 import { describe, expect, test } from '@jest/globals';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import readFile from '../src/utils.js';
 import gendiff from '../src/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const getFixturePath = (filename) => path.resolve(__dirname, '..', '__fixtures__', filename);
 
 describe('check output', () => {
   const testData = [
@@ -12,8 +18,8 @@ describe('check output', () => {
   test.each(testData)(
     'formatters work',
     (file1, file2, expectedFile, format = 'stylish') => {
-      const result = gendiff(file1, file2, format);
-      const expected = readFile(expectedFile);
+      const result = gendiff(getFixturePath(file1), getFixturePath(file2), format);
+      const expected = readFile(getFixturePath(expectedFile));
       expect(result).toEqual(expected);
     },
   );
