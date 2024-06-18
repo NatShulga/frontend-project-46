@@ -1,4 +1,3 @@
-import { describe, expect, test } from '@jest/globals';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import readFile from '../src/utils.js';
