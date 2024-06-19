@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: 0 */
 import path from 'path';
 import parse from './parsers.js';
 import readFile from './utils.js';
